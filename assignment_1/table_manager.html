@@ -2,9 +2,34 @@
 <head>
 <!-- CSS -->
 <style type="text/css">
+
 	div {
+
+        border: 10px;
 		margin-bottom: 20px;
-	}
+    }
+  #org_table tr:first-child{
+    font-family:sans-serif;
+    text-align: center;
+    font-weight: bolder;
+    background-color: green;
+  }
+  tr:hover{
+    background:yellow;
+  }
+
+  table {
+    border-collapse: collapse; 
+}
+
+td {
+    padding: 10px 0;     
+    border-width: 1px 0; 
+    border-color: #000;
+    border-style: solid;
+}
+
+
 </style>
 
 <!-- Data -->
@@ -12,188 +37,204 @@
 
 // Don't copy this to any other places in this file. You can just use the "organizations" variable to do your assignment. 
 var organizations = [
+    { 
+        "Region": "Region",
+        "Country": "Country",
+        "CountryIncomeLevel": "Country Income Level",
+        "OrganizationName": "Organization Name",
+        "OrganizationType": "Organization Type",
+        "Sectors": "Sectors",
+        "Description": "Description",
+        "City": "City",
+        "StateRegion": "State/Region",
+        "FoundingYear":"Founding Year",
+        "Size": "Size",
+        "TypeofDataUsed": "Type of Data Used",
+        "profileID": "profileID",
+    },
 	 {
         "Region": "East Asia & Pacific",
         "Country": "New Zealand",
-        "Country Income Level": "High income",
-        "Organization Name": "200 Square",
-        "Organization Type": "For-profit",
+        "CountryIncomeLevel": "High income",
+        "OrganizationName": "200 Square",
+        "OrganizationType": "For-profit",
         "Sectors": "Housing, construction & real estate",
         "Description": "200 Square is an online real estate agent in New Zealand.",        
         "City": "Wellington",
-        "State/Region": "Wellington",
-        "Founding Year": 2010,
+        "StateRegion": "Wellington",
+        "FoundingYear": 2010,
         "Size": "1 to 10",
-        "Type of Data Used": "Housing, Education",
+        "TypeofDataUsed": "Housing, Education",
         "profileID": "731"
     },
     {
         "Region": "Europe & Central Asia",
         "Country": "United Kingdom",
-        "Country Income Level": "High income",
-        "Organization Name": "21c Consultancy",
-        "Organization Type": "For-profit",
+        "CountryIncomeLevel": "High income",
+        "OrganizationName": "21c Consultancy",
+        "OrganizationType": "For-profit",
         "Sectors": "IT and geospatial",
         "Description": "21c is ICT innovation consultancy which advises international actors, institutions and governments around the world on technological trends which can affect the way they deliver services.",        
         "City": "London",
-        "State/Region": "",
-        "Founding Year": 2015,
+        "StateRegion": "",
+        "FoundingYear": 2015,
         "Size": "1 to 10",
-        "Type of Data Used": "",
+        "TypeofDataUsed": "",
         "profileID": "1694"
     },
     {
         "Region": "Europe & Central Asia",
         "Country": "Russian Federation",
-        "Country Income Level": "High income",
-        "Organization Name": "2GIS",
-        "Organization Type": "For-profit",
+        "CountryIncomeLevel": "High income",
+        "OrganizationName": "2GIS",
+        "OrganizationType": "For-profit",
         "Sectors": "IT and geospatial",
         "Description": "2GIS is a city information service combined with a map. ",        
         "City": "Novosibirsk",
-        "State/Region": "Novosibirsk Oblast",
-        "Founding Year": 1999,
+        "StateRegion": "Novosibirsk Oblast",
+        "FoundingYear": 1999,
         "Size": "1000+",
-        "Type of Data Used": "Transportation, Geospatial, Business",
+        "TypeofDataUsed": "Transportation, Geospatial, Business",
         "profileID": "1025"
     },
     {
         "Region": "North America",
         "Country": "United States",
-        "Country Income Level": "High income",
-        "Organization Name": "2nd City Zoning",
-        "Organization Type": "Nonprofit",
+        "CountryIncomeLevel": "High income",
+        "OrganizationName": "2nd City Zoning",
+        "OrganizationType": "Nonprofit",
         "Sectors": "Housing, construction & real estate",
         "Description": "An Open City App, 2nd City Zoning is an interactive map that lets you find out how your building is zoned, learn where to locate your business and explore zoning patterns throughout the city.",        
         "City": "Chicago",
-        "State/Region": "Illinois",
-        "Founding Year": 2013,
+        "StateRegion": "Illinois",
+        "FoundingYear": 2013,
         "Size": "1 to 10",
-        "Type of Data Used": "Housing",
+        "TypeofDataUsed": "Housing",
         "profileID": "1693"
     },
     {
         "Region": "North America",
         "Country": "United States",
-        "Country Income Level": "High income",
-        "Organization Name": "3 Round Stones Inc",
-        "Organization Type": "For-profit",
+        "CountryIncomeLevel": "High income",
+        "OrganizationName": "3 Round Stones Inc",
+        "OrganizationType": "For-profit",
         "Sectors": "IT and geospatial",
         "Description": "3 Round Stones' Open Source platform is used by the Fortune 2000 and US Government Agencies to collect, publish and reuse data, both public and proprietary.",
         "City": "Arlington",
-        "State/Region": "Virginia",
-        "Founding Year": 2010,
+        "StateRegion": "Virginia",
+        "FoundingYear": 2010,
         "Size": "1 to 10",
-        "Type of Data Used": "Weather, Science and research, Health/healthcare, Geospatial, Environment, Energy, Demographic and social, Business",
+        "TypeofDataUsed": "Weather, Science and research, Health/healthcare, Geospatial, Environment, Energy, Demographic and social, Business",
         "profileID": "580"
     },
     {
         "Region": "North America",
         "Country": "United States",
-        "Country Income Level": "High income",
-        "Organization Name": "360 Yield Center",
-        "Organization Type": "For-profit",
+        "CountryIncomeLevel": "High income",
+        "OrganizationName": "360 Yield Center",
+        "OrganizationType": "For-profit",
         "Sectors": "Agriculture",
         "Description": "Taking a 360-degree view of key yield-limiting variables, 360 Yield Center develops strategies for better-performing crops and better on-farm profits.",        
         "City": "Morton",
-        "State/Region": "Illinois",
-        "Founding Year": 2014,
+        "StateRegion": "Illinois",
+        "FoundingYear": 2014,
         "Size": "51 to 200",
-        "Type of Data Used": "Agriculture, Environment, Weather",
+        "TypeofDataUsed": "Agriculture, Environment, Weather",
         "profileID": "1692"
     },
     {
         "Region": "Europe & Central Asia",
         "Country": "Denmark",
-        "Country Income Level": "High income",
-        "Organization Name": "3Strikes - City Stories",
-        "Organization Type": "For-profit",
+        "CountryIncomeLevel": "High income",
+        "OrganizationName": "3Strikes - City Stories",
+        "OrganizationType": "For-profit",
         "Sectors": "Arts, culture and tourism",
         "Description": "City Stories provides a platform that allows users to explore local stories and simultaneously contribute their own.",
         "City": "Aarhus",
-        "State/Region": "Central Denmark Region",
-        "Founding Year": 2015,
+        "StateRegion": "Central Denmark Region",
+        "FoundingYear": 2015,
         "Size": "1 to 10",
-        "Type of Data Used": "Arts and culture",
+        "TypeofDataUsed": "Arts and culture",
         "profileID": "2278"
     },
     {
         "Region": "Europe & Central Asia",
         "Country": "Finland",
-        "Country Income Level": "High income",
-        "Organization Name": "3Tier (Europe) ",
-        "Organization Type": "For-profit",
+        "CountryIncomeLevel": "High income",
+        "OrganizationName": "3Tier (Europe) ",
+        "OrganizationType": "For-profit",
         "Sectors": "Energy and climate",
         "Description": "3TIER is a global environmental and industrial measurement company providing weather-driven renewable energy risk assessment and forecasting for wind, solar, and hydro power projects.",        
         "City": "Helsinki",
-        "State/Region": "Uusimaa",
-        "Founding Year": 2012,
+        "StateRegion": "Uusimaa",
+        "FoundingYear": 2012,
         "Size": "11 to 50",
-        "Type of Data Used": "Other, Environment",
+        "TypeofDataUsed": "Other, Environment",
         "profileID": "952"
     },
     {
         "Region": "North America",
         "Country": "United States",
-        "Country Income Level": "High income",
-        "Organization Name": "5PSolutions",
-        "Organization Type": "For-profit",
+        "CountryIncomeLevel": "High income",
+        "OrganizationName": "5PSolutions",
+        "OrganizationType": "For-profit",
         "Sectors": "IT and geospatial",
         "Description": "5PSolutions are artisans of mobile platforms.",       
         "City": "Fairfax",
-        "State/Region": "Virginia",
-        "Founding Year": 2007,
+        "StateRegion": "Virginia",
+        "FoundingYear": 2007,
         "Size": "1 to 10",
-        "Type of Data Used": "Environment",
+        "TypeofDataUsed": "Environment",
         "profileID": "534"
     },
     {
         "Region": "North America",
         "Country": "United States",
-        "Country Income Level": "High income",
-        "Organization Name": "AAA National",
-        "Organization Type": "Other",
+        "CountryIncomeLevel": "High income",
+        "OrganizationName": "AAA National",
+        "OrganizationType": "Other",
         "Sectors": "Transportation and logistics",
         "Description": "AAA provides services such as travel, automotive, insurance, financial, and discounts.",        
         "City": "Irving",
-        "State/Region": "Texas",
-        "Founding Year": 1902,
+        "StateRegion": "Texas",
+        "FoundingYear": 1902,
         "Size": "201 to 1000",
-        "Type of Data Used": "Transportation",
+        "TypeofDataUsed": "Transportation",
         "profileID": "1691"
     },
     {
         "Region": "North America",
         "Country": "United States",
-        "Country Income Level": "High income",
-        "Organization Name": "AAASHTO",
-        "Organization Type": "Other",
+        "CountryIncomeLevel": "High income",
+        "OrganizationName": "AAASHTO",
+        "OrganizationType": "Other",
         "Sectors": "Transportation and logistics",
         "Description": "AASHTO works to educate the public and key decision makers about the critical role that transportation plays in securing a good quality of life and sound economy. AASHTO serves as a liaison between state departments of transportation and the Federal government.",
         "City": "Washington",
-        "State/Region": "DC",
-        "Founding Year": 1913,
+        "StateRegion": "DC",
+        "FoundingYear": 1913,
         "Size": "51 to 200",
-        "Type of Data Used": "Transportation",
+        "TypeofDataUsed": "Transportation",
         "profileID": "1690"
     },
     {
         "Region": "Latin America & Caribbean",
         "Country": "Chile",
-        "Country Income Level": "High income",
-        "Organization Name": "ABRELATAM",
-        "Organization Type": "Nonprofit",
+        "CountryIncomeLevel": "High income",
+        "OrganizationName": "ABRELATAM",
+        "OrganizationType": "Nonprofit",
         "Sectors": "Governance",
         "Description": "ABRELATAM is an conference that seeks to accelerate the process of opening information through Open Data transparency and promote the Latin America.",        
         "City": "Santiago",
-        "State/Region": "",
-        "Founding Year": 2015,
+        "StateRegion": "",
+        "FoundingYear": 2015,
         "Size": "",
-        "Type of Data Used": "",
+        "TypeofDataUsed": "",
         "profileID": "1687"
     }
 	
 ];
+
 </script>
 
 </head>
@@ -204,11 +245,54 @@ var organizations = [
 
 <script>
 // outputs the first item of the organizations array. Just for testing.
-console.log(organizations[0]); 
+console.log(organizations[1]); 
 
 // Your JavaScript code goes here
 
 
+      function displayTable(org_table){   
+    // get the table to add rows to
+    var table = document.getElementById('org_table');
+
+    // cycle through the array for each of the organzations.
+    for (var a = 0; a < organizations.length; ++a)
+    {   // keep a reference to an individual organization object
+        var orgs = organizations[a];
+        // create a row element to append cells to
+        var row = document.createElement('tr');
+
+        row.onclick = function () {
+            this.parentElement.removeChild(this);
+        };
+
+        // headers of the array elements
+        var headers = ['Region', 'Country', 'CountryIncomeLevel', 'OrganizationName' , 'OrganizationType', 'Sectors', 'Description',
+         'City', 'StateRegion', 'FoundingYear', 'Size', 'TypeofDataUsed','profileID'];
+
+    for (var j = 0; j < organizations.length; ++j)
+        {   
+            var cell = document.createElement('td');
+            // set headers of organization columns using bracket notation (orgs[i] is a string,
+            // which can be used to access headers of the organizations)
+            cell.innerHTML = orgs[headers[j]];
+
+
+         row.appendChild(cell);
+        }
+
+        // add new row to table
+        table.appendChild(row);
+    }
+}
+ displayTable(org_table);
+
+/* I do not know how to implement part 5 so I am going to use this comment area to explain what I wanted to implement but could not figure out.
+ My idea was to start by implementing the stats table by hard coding the descriptive stats string that will not be decremented by the row clicks. 
+I was then thinking to add a line in the row.onclick function that updates the descriptive statists int by decreasing number by the deleted content in the rows.
+Something like "Total Number of High-Income Countries" + hiCountries(variable that holds total of high income countries that can be decremented.)
+Maybe add a if statement saying if row 1 is deleted, certain desciptive elements will be decremented & so on...*/
+    
+ 
 </script>
 
 </body>
