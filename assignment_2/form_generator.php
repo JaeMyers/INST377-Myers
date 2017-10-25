@@ -88,8 +88,9 @@ echo "<br>";
 
 echo "<input type='submit' value='submit'>";
 echo "</form>";
-} } 
-else { 
+  }
+
+} else { 
     echo "Zero Results";
 }
 
